@@ -30,7 +30,8 @@ class QuestionAPI(viewsets.ModelViewSet):
     serializer_class=QuestionSerializer
     authentication_classes = [SessionAuthentication]
     permission_classes = [IsAuthenticatedOrReadOnly]
-    throttle_classes=[AnonRateThrottle,UserRateThrottle]
+    
+    throttle_classes =[UserMinThrottle,UserDayThrottle]
     filter_backends = [SearchFilter]
     search_fields = ['question','vote_count','views','tags']
 
