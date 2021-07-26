@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-0q+j0u2v8(#+&6_!iawl%nx3^8+w-w3_e68wd&my@yl#awpg&*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['tini.tinitoc.com','www.tini.tinitoc.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -128,8 +128,8 @@ REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES':{
         'anon':'5/minute',
         'anon':'100/day',
-        'user':'5/minute',
-        'faisal':'100/day',
+        'user_min': '5/minute',
+        'user_day': '100/day',
     }
 }
 REST_FRAMEWORK = {
